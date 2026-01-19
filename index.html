@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasif Khan Jadoon | Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<!-- ================= HEADER ================= -->
+<header>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-code"></i>
+            <span>My Portfolio</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#academic"><i class="fas fa-graduation-cap"></i> Academic</a></li>
+            <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+            <li><a href="#cv"><i class="fas fa-file-alt"></i> CV</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+</header>
+
+<main>
+
+<!-- ================= PROFILE ================= -->
+<section id="profile" class="section">
+    <div class="profile-section">
+        <div class="profile-image">
+            <img src="image.jpg" alt="Wasif Khan Jadoon" class="profile-img">
+        </div>
+
+        <div class="profile-info">
+            <h1>Wasif Khan Jadoon</h1>
+            <div class="reg-number">Registration No: 5126585</div>
+
+            <div class="bio-details">
+                <div class="detail-item">
+                    <i class="fas fa-birthday-cake"></i> <strong>Age:</strong> 19 Years
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-home"></i> <strong>From:</strong> Havelian, Abbottabad
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> UET Abbottabad
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-user"></i> <strong>Gender:</strong> Male
+                </div>
+            </div>
+
+            <p>
+                I am a Software Engineering student at the University of Engineering
+                and Technology Peshawar (Abbottabad Campus), passionate about
+                programming and web development.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <div class="skill-name"><i class="fab fa-c"></i> C Language</div>
+                <span class="skill-percent">90%</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" data-percent="90"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <div class="skill-name"><i class="fab fa-html5"></i> HTML & CSS</div>
+                <span class="skill-percent">70%</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" data-percent="70"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <div class="skill-name"><i class="fas fa-language"></i> Spoken English</div>
+                <span class="skill-percent">50%</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" data-percent="50"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= ACADEMIC ================= -->
+<section id="academic" class="section">
+    <h2 class="section-title">Academic Background</h2>
+
+    <div class="academic-container">
+        <div class="table-container">
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Level <i class="fas fa-sort"></i></th>
+                        <th onclick="sortTable(1)">Institute <i class="fas fa-sort"></i></th>
+                        <th onclick="sortTable(2)">Year <i class="fas fa-sort"></i></th>
+                    </tr>
+                </thead>
+                <tbody id="academicTable">
+                    <tr>
+                        <td>Primary</td>
+                        <td>Govt. Boys Primary School Sareela</td>
+                        <td>2017</td>
+                    </tr>
+                    <tr>
+                        <td>Matric</td>
+                        <td>The Hall Mark School & College</td>
+                        <td>2022</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>Tameer I Wattan College Abbottabad</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>Bachelor</td>
+                        <td>UET Peshawar</td>
+                        <td>2025–Present</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CV ================= -->
+<section id="cv" class="section">
+    <h2 class="section-title">Curriculum Vitae</h2>
+
+    <div class="cv-container">
+        <div class="cv-buttons">
+            <button class="btn primary-btn" id="viewCVBtn">
+                <i class="fas fa-eye"></i> View CV
+            </button>
+
+            <!-- ✅ FIXED DOWNLOAD BUTTON -->
+            <a href="cv.pdf" download target="_blank" class="btn secondary-btn">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </div>
+
+        <div id="cvViewer" class="cv-preview">
+            <div class="cv-placeholder">
+                <i class="fas fa-file-pdf"></i>
+                <h3>CV Preview</h3>
+                <p>Click "View CV" to see the PDF</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
+    <h2 class="section-title">Get In Touch</h2>
+
+    <div class="contact-container">
+        <form id="contactForm" class="contact-form">
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+                <i class="fas fa-comment"></i>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+
+        </form>
+    </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer id="about">
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-about">
+                <h3>About Me</h3>
+                <p>
+                    I am a student of first semester Software Engineering at UET Peshawar
+                    (Abbottabad Campus).I am learnig about C programming language and web development.
+                </p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Connect With Me</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/wasif-khan-jadoon-b510383a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://www.facebook.com/share/17vP1Sm4Te/" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i> Instagram
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 Wasif Khan Jadoon. All Rights Reserved. | Software Engineering Student</p>
+        </div>
+
+    </div>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
